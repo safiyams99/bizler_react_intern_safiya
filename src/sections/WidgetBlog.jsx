@@ -42,18 +42,15 @@ const WidgetBlog = () => {
                         </div>
                     </div>
                     <div className="widget-content">
-                        <PostItem
-                            src = {PostItemData[0].src}
-                            PostItemContent = {PostItemData[0].PostItemContent}
-                        />
-                        <PostItem
-                            src = {PostItemData[1].src}
-                            PostItemContent = {PostItemData[1].PostItemContent}
-                        />
-                        <PostItem
-                            src = {PostItemData[2].src}
-                            PostItemContent = {PostItemData[2].PostItemContent}
-                        />
+                        {PostItemData.map((data) => {
+                            return(
+                                <PostItem
+                                    key ={data.src}
+                                    src = {data.src}
+                                    PostItemContent={data.PostItemContent}
+                                />
+                            );
+                        })}
 
                     </div>
                 </div>
@@ -71,14 +68,15 @@ const WidgetBlog = () => {
                     <div className="widget-content">
                         <div className="tags">
                             <ul>
-                                <BlogTags TagTitle={BlogTagsData[0].TagTitle}/>
-                                <BlogTags TagTitle={BlogTagsData[1].TagTitle}/>
-                                <BlogTags TagTitle={BlogTagsData[2].TagTitle}/>
-                                <BlogTags TagTitle={BlogTagsData[3].TagTitle}/>
-                                <BlogTags TagTitle={BlogTagsData[4].TagTitle}/>
-                                <BlogTags TagTitle={BlogTagsData[5].TagTitle}/>
-                                <BlogTags TagTitle={BlogTagsData[6].TagTitle}/>
-                                <BlogTags TagTitle={BlogTagsData[7].TagTitle}/>
+                                {BlogTagsData.map((data) => {
+                                    return (
+                                        <BlogTags
+                                            key={data.TagTitle}
+                                            TagTitle={data.TagTitle}
+                                        />
+                                    );
+                                })}
+
                             </ul>
                         </div>
                     </div>
@@ -98,10 +96,15 @@ const WidgetBlog = () => {
                     <div className="widget-content">
                         <div className="quick-connect-form">
                             <form action="https://wpshopmart.com/index.html">
-                                <BlogQuickConnect FormPlaceholder={BlogQuickConnectData[0].FormPlaceholder}/>
-                                <BlogQuickConnect FormPlaceholder={BlogQuickConnectData[1].FormPlaceholder}/>
-                                <BlogQuickConnect FormPlaceholder={BlogQuickConnectData[2].FormPlaceholder}/>
-                                <BlogQuickConnect FormPlaceholder={BlogQuickConnectData[3].FormPlaceholder}/>
+                                {BlogQuickConnectData.map((data) => {
+                                    return (
+                                        <BlogQuickConnect
+                                            key={data.FormPlaceholder}
+                                            FormPlaceholder={data.FormPlaceholder}
+                                        />
+                                    );
+                                })}
+
                                 <div className="form-group">
                                     <textarea placeholder="Message"></textarea>
                                 </div>
