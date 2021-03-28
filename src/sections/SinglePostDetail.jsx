@@ -4,6 +4,7 @@ import {PostItemData, CommentPostData} from '../Data/BlogDetail_Data';
 import BlogPostImg from '../img/blog-post-1.jpg';
 import AuthorImg from '../img/author_dp.jpg';
 import CommentPost from "../components/CommentPost";
+import WidgetBlog from "./WidgetBlog";
 
 
 const SinglePostDetail = () => {
@@ -14,7 +15,9 @@ const SinglePostDetail = () => {
                     <div className="col-lg-12 col-md-12 col-xs-12">
                         <div className="row">
                             <div className="col-lg-9 col-md-12 col-sm-12 col-xs-12 blog-detail">
-                                <div className="post-img"><img src={BlogPostImg} alt="Post"/></div>
+                                <div className="post-img">
+                                    <img src={BlogPostImg} alt="Post"/>
+                                </div>
                                 <div className="post-detail">
                                     <div className="about-post">
                                         <h4>The generated Lorem Ipsum is therefore always free</h4>
@@ -62,9 +65,15 @@ const SinglePostDetail = () => {
                                         <div className="tags">
                                             <div className="title">Tags</div>
                                             <ul>
-                                                <li><a href="javascript:void(0)" title="Bootstrap">Bootstrap</a></li>
-                                                <li><a href="javascript:void(0)" title="HTML">HTML</a></li>
-                                                <li><a href="javascript:void(0)" title="CSS">CSS</a></li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="Bootstrap">Bootstrap</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="HTML">HTML</a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:void(0)" title="CSS">CSS</a>
+                                                </li>
                                                 <li><a href="javascript:void(0)" title="Jquery">Jquery</a></li>
                                                 <li><a href="javascript:void(0)" title="CSS">CSS</a></li>
                                             </ul>
@@ -122,7 +131,7 @@ const SinglePostDetail = () => {
                                     <ol className="comments-list">
                                         <li className="comment-item">
                                             <CommentPost src={CommentPostData[0].src} name={CommentPostData[0].name}
-                                            date={CommentPostData[0].date}/>
+                                                         date={CommentPostData[0].date}/>
                                             <ol className="comments-list reply">
                                                 <li className="comment-item">
                                                     <CommentPost src={CommentPostData[1].src} name={CommentPostData[1].name}
@@ -173,122 +182,7 @@ const SinglePostDetail = () => {
                                     </form>
                                 </div>
                             </div>
-                            <aside className="col-lg-3 col-md-12 col-sm-12 col-xs-12 sidebar right">
-                                <div className="widget">
-                                    <div className="sidebar_heading">
-                                        <h5>Search</h5>
-                                        <div className="separator left-align ">
-                                            <ul>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="widget-content">
-                                        <div className="search">
-                                            <form action="https://wpshopmart.com/index.html">
-                                                <div className="form-group">
-                                                    <input type="text" placeholder="Search..."/>
-                                                    <button type="submit"><i className="flat flaticon-search"></i></button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="widget">
-                                    <div className="sidebar_heading">
-                                        <h5>Recent Posts</h5>
-                                        <div className="separator left-align ">
-                                            <ul>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="widget-content">
-                                        <PostItem
-                                        src = {PostItemData[0].src}
-                                        PostItemContent = {PostItemData[0].PostItemContent}
-                                        />
-                                        <PostItem
-                                            src = {PostItemData[1].src}
-                                            PostItemContent = {PostItemData[1].PostItemContent}
-                                        />
-                                        <PostItem
-                                            src = {PostItemData[2].src}
-                                            PostItemContent = {PostItemData[2].PostItemContent}
-                                        />
-
-                                    </div>
-                                </div>
-                                <div className="widget">
-                                    <div className="sidebar_heading">
-                                        <h5>Tags</h5>
-                                        <div className="separator left-align ">
-                                            <ul>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="widget-content">
-                                        <div className="tags">
-                                            <ul>
-                                                <li><a href="javascript:void(0)" title="Bootstrap">Bootstrap</a></li>
-                                                <li><a href="javascript:void(0)" title="HTML">HTML</a></li>
-                                                <li><a href="javascript:void(0)" title="CSS">CSS</a></li>
-                                                <li><a href="javascript:void(0)" title="Jquery">Jquery</a></li>
-                                                <li><a href="javascript:void(0)" title="Web Development">Web Development</a>
-                                                </li>
-                                                <li><a href="javascript:void(0)" title="Creative">Creative</a></li>
-                                                <li><a href="javascript:void(0)" title="HTML">HTML</a></li>
-                                                <li><a href="javascript:void(0)" title="CSS">CSS</a></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="clearfix"></div>
-                                </div>
-                                <div className="widget">
-                                    <div className="sidebar_heading">
-                                        <h5>Quick Connect</h5>
-                                        <div className="separator left-align ">
-                                            <ul>
-                                                <li></li>
-                                                <li></li>
-                                                <li></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                    <div className="widget-content">
-                                        <div className="quick-connect-form">
-                                            <form action="https://wpshopmart.com/index.html">
-                                                <div className="form-group">
-                                                    <input type="text" placeholder="Full Name"/>
-                                                </div>
-                                                <div className="form-group">
-                                                    <input type="text" placeholder="Email"/>
-                                                </div>
-                                                <div className="form-group">
-                                                    <input type="text" placeholder="Phone No."/>
-                                                </div>
-                                                <div className="form-group">
-                                                    <input type="text" placeholder="Subject"/>
-                                                </div>
-                                                <div className="form-group">
-                                                    <textarea placeholder="Message"></textarea>
-                                                </div>
-                                                <div className="form-group">
-                                                    <button type="submit">Send Message <i className="flat flaticon-plane"></i>
-                                                    </button>
-                                                </div>
-                                            </form>
-                                        </div>
-                                    </div>
-                                </div>
-                            </aside>
+                            <WidgetBlog />
                         </div>
                     </div>
                 </div>

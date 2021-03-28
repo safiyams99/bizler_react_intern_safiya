@@ -43,4 +43,47 @@ const CommentPostData = [
     }
 ]
 
-export {PostItemData, CommentPostData};
+const BlogTagsData = [
+    {
+        TagTitle: "Bootstrap"
+    },
+    {
+        TagTitle: "HTML"
+    },
+    {
+        TagTitle: "CSS"
+    },
+    {
+        TagTitle: "Jquery"
+    },
+    {
+        TagTitle: "Web Development"
+    },
+    {
+        TagTitle: "Creative"
+    },
+    {
+        TagTitle: "HTML"
+    },
+    {
+        TagTitle: "CSS"
+    }
+
+]
+
+const BlogQuickConnectData = [
+    {
+        FormPlaceholder: "Full Name"
+    },
+    {
+        FormPlaceholder: "Email"
+    },
+    {
+        FormPlaceholder: "Phone No."
+    },
+    {
+        FormPlaceholder: "Subject"
+    }
+]
+
+export {PostItemData, CommentPostData, BlogTagsData, BlogQuickConnectData};

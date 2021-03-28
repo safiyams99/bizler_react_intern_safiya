@@ -3,7 +3,6 @@ import React from 'react';
 import Home from './pages/Home'
 import AboutUs from './pages/AboutUs'
 import BlogDetail from "./pages/BlogDetail";
-import blogRightSidebar from "./pages/blogRightSidebar";
 
 
 function App() {
@@ -12,7 +11,6 @@ function App() {
           {/* <Home /> */}
           {/*<AboutUs />*/}
           <BlogDetail/>
-          {/*<blogRightSidebar/>*/}
       </>
       );
 }
